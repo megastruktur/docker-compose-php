@@ -6,6 +6,8 @@ services:
       dockerfile: web.docker
     volumes:
       - ../app:/var/www
+      - ../logs/app-access.log:/var/log/app-access.log
+      - ../logs/app-error.log:/var/log/app-error.log
     restart: always
     ports:
       - "8090:80"
